@@ -1,0 +1,40 @@
+.copy {
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.copy > div {
+  width: 90%;
+}
+
+.original-link {
+  color: hsl(260, 8%, 14%);
+  margin-bottom: 1rem;
+}
+
+.shortened-link {
+  border-top: 1px solid hsl(257, 7%, 63%);
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(180, 66%, 49%);
+}
+
+.shorten-button button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+

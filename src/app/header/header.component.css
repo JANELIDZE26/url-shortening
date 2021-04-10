@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fbf8f8;
+}
+
+.toggleButton {
+  padding: 0;
+}
+
+.toggleButton:focus {
+  outline: none;
+}
+
+.hamburger .hamburger-inner,
+.hamburger .hamburger-inner::before,
+.hamburger .hamburger-inner::after {
+  background-color: grey;
+}
+
+.main-nav {
+  background: hsl(257, 27%, 26%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,100%);
+  width: 90%;
+  border-radius: 10px;
+}

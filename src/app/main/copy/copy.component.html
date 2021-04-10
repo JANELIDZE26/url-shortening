@@ -1,0 +1,18 @@
+<div class="copy">
+  <div class="original-link">
+    <p>{{ originalLink }}</p>
+  </div>
+  <div class="shortened-link">
+    <p>{{ shortenedLink }}</p>
+  </div>
+  <div class="shorten-button">
+    <button
+      [ngStyle]="{
+        'background-color': copied ? 'hsl(257, 27%, 26%)' : 'hsl(180, 66%, 49%)'
+      }"
+      (click)="copyToClipboard()"
+    >
+      {{ copied ? "Copied!" : "Copy" }}
+    </button>
+  </div>
+</div>

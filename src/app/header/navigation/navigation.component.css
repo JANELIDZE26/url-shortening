@@ -1,0 +1,55 @@
+.navigation-container > div {
+  width: 90%;
+  margin: auto;
+}
+
+.navigation-container .navigation {
+  margin-bottom: 2rem;
+}
+
+.navigation ul {
+  list-style: none;
+  color: white;
+  text-align: center;
+}
+
+.navigation ul li {
+  margin-top: 1rem;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.login {
+  border-top: 1px solid grey;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.login button {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.login-button {
+  background: transparent;
+}
+
+.sign-up-button {
+  background: hsl(180, 66%, 49%);
+  padding: 1rem;
+  border-radius: 30px;
+}

@@ -1,0 +1,41 @@
+footer {
+  background-color: hsl(260, 8%, 14%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.logo h2 {
+  font-size: 2.2rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section-title {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section-list {
+  list-style: none;
+}
+
+.footer-section-list li {
+  margin-top: 0.6rem;
+  color: hsl(0, 0%, 75%);
+}
+
+.footer-medias {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.footer-media {
+  margin-left: 2rem;
+}

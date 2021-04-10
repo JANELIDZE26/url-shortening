@@ -1,0 +1,240 @@
+main {
+  background: linear-gradient(to bottom, white 20%, hsl(0, 11%, 96%) 20%) center;
+}
+
+main > section {
+  width: 90%;
+  margin: auto;
+}
+
+.intro .intro-image img {
+  width: 100%;
+}
+
+.intro {
+  text-align: center;
+  margin: 10rem auto 3rem auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro .intro-title {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  color: hsl(255, 11%, 22%);
+}
+
+.intro-description {
+  color: hsl(257, 7%, 63%);
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.intro-get-started {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.intro-get-started button {
+  background: hsl(180, 66%, 49%);
+  border-radius: 50px;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: 70%;
+  cursor: pointer;
+}
+
+.link-shorten {
+  background: hsl(257, 27%, 26%);
+  position: relative;
+  z-index: 0;
+  padding: 1rem 0;
+  margin-bottom: 3rem !important;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.shorten-background {
+  border-radius: 10px;
+  position: absolute;
+  top: -8px;
+  right: -5px;
+  z-index: -1;
+}
+
+.link-shorten > div {
+  width: 90%;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.link-shorten-button button,
+.link-shorten-input input {
+  padding: 0.8rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: background-color 0.4s;
+}
+
+.link-shorten-input input::placeholder {
+  color: hsl(0, 0%, 75%);
+}
+
+.link-shorten-input input[disabled]::placeholder,
+.link-shorten-input input[disabled] {
+  color: white;
+  cursor: not-allowed;
+}
+
+.link-shorten-button button {
+  background: hsl(180, 66%, 49%);
+  color: white;
+  cursor: pointer;
+}
+
+.link-shorten-button button[disabled] {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.features {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.features-intro-title {
+  margin-bottom: 1.5rem;
+  color: hsl(255, 11%, 22%);
+}
+
+.features-intro-description {
+  color: hsl(0, 0%, 75%);
+}
+
+.feature {
+  background: white;
+  margin: 6rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.feature-icon {
+  background: hsl(257, 27%, 26%);
+  border-radius: 100%;
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -3rem;
+  margin: auto;
+}
+
+.feature-title {
+  color: hsl(255, 11%, 22%);
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: hsl(0, 0%, 75%);
+  margin-bottom: 1rem;
+}
+
+.feature-1 {
+  z-index: 4;
+}
+
+.feature-2 {
+  z-index: 3;
+}
+
+.feature-3 {
+  z-index: 2;
+}
+
+.feature-2 .feature-icon::before,
+.feature-3 .feature-icon::before {
+  content: "";
+  background: hsl(180, 66%, 49%);
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  width: 0.5rem;
+  height: 5rem;
+}
+
+.get-started {
+  background-color: hsl(257, 27%, 26%);
+  height: 18.5rem;
+  width: 100% !important;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.get-started > div {
+  width: 90%;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.get-started-title h2 {
+  font-size: 1.8rem;
+}
+
+.get-started-button button {
+  background-color: hsl(180, 66%, 49%);
+  outline: none;
+  border: none;
+  width: 55%;
+  min-width: 12rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.boost-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+main .copies {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  max-height: calc(168px * 3);
+  overflow: scroll;
+}
+
+.no-copies {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.error {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  color: red;
+}

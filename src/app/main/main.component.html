@@ -1,0 +1,132 @@
+<main>
+  <section class="intro">
+    <div class="intro-image">
+      <img
+        src="./assets/images/illustration-working.svg"
+        alt="working-image"
+      />
+    </div>
+    <div class="intro-title"><h1>More than just shorter links</h1></div>
+    <div class="intro-description">
+      <p>
+        Build your brand’s recognition and get detailed insights on how your
+        links are performing.
+      </p>
+    </div>
+    <div class="intro-get-started">
+      <button>Get Started</button>
+    </div>
+  </section>
+  <section class="link-shorten">
+    <img
+      class="shorten-background"
+      src="./assets/images/bg-shorten-mobile.svg"
+      alt="shorten-background"
+    />
+    <div class="link-shorten-input">
+      <form #form="ngForm">
+        <input
+          #shortenInput
+          name="shortenInput"
+          [disabled]="fetching"
+          [(ngModel)]="url"
+          type="text"
+          placeholder="Shorten a link here..."
+        />
+      </form>
+    </div>
+    <div class="link-shorten-button">
+      <button [disabled]="(shortenInput.value.length === 0)" (click)="shortenIt(form)">Shorten It!</button>
+    </div>
+  </section>
+  <div *ngIf="fetching" class="spinner">
+    <app-spinner></app-spinner>
+  </div>
+  <section class="copies">
+
+    <div>
+      <p class="no-copies" *ngIf="showNowLinks">NO LINKS YET!</p>
+    </div>
+    <div *ngIf="showError" class="error">
+      <p>INVALID LINK</p>
+    </div>
+    <app-copy
+      *ngFor="let copy of copies"
+      [originalLink]="copy.original_link"
+      [shortenedLink]="copy.full_short_link"
+    ></app-copy>
+  </section>
+  <section class="features">
+    <div class="features-intro">
+      <h1 class="features-intro-title">Advanced Statistics</h1>
+      <p class="features-intro-description">
+        Track how your links are performing across the web with our advanced
+        statistics dashboard.
+      </p>
+    </div>
+    <div class="feature feature-1">
+      <div class="feature-icon">
+        <img
+          src="./assets/images/icon-brand-recognition.svg"
+          alt="brand-recognition"
+        />
+      </div>
+      <div class="feature-title">
+        <h2>Brand Recognition</h2>
+      </div>
+      <div class="feature-description">
+        <p>
+          Boost your brand recognition with each click. Generic links don’t mean
+          a thing. Branded links help instil confidence in your content.
+        </p>
+      </div>
+    </div>
+    <div class="feature feature-2">
+      <div class="feature-icon">
+        <img
+          src="./assets/images/icon-detailed-records.svg"
+          alt="detailed-records"
+        />
+      </div>
+      <div class="feature-title">
+        <h2>Detailed Records</h2>
+      </div>
+      <div class="feature-description">
+        <p>
+          Gain insights into who is clicking your links. Knowing when and where
+          people engage with your content helps inform better decisions.
+        </p>
+      </div>
+    </div>
+    <div class="feature feature-3">
+      <div class="feature-icon">
+        <img
+          src="./assets/images/icon-fully-customizable.svg"
+          alt="fully-customizable"
+        />
+      </div>
+      <div class="feature-title">
+        <h2>Fully Customizable</h2>
+      </div>
+      <div class="feature-description">
+        <p>
+          Improve brand awareness and content discoverability through
+          customizable links, supercharging audience engagement.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="get-started">
+    <img
+      class="boost-background"
+      src="./assets/images/bg-boost-mobile.svg"
+      alt="boost-background"
+    />
+    <div class="get-started-title">
+      <h2>Boost your links today</h2>
+    </div>
+    <div class="get-started-button">
+      <button>Get Started</button>
+    </div>
+  </section>
+</main>

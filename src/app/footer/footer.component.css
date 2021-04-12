@@ -38,4 +38,32 @@ section {
 
 .footer-media {
   margin-left: 2rem;
+  transition: all 0.3s;
+}
+
+footer ul li {
+  transition: all .3s;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 10rem;
+  }
+
+  .footer-medias {
+    margin-top: 0;
+  }
+
+  footer ul li:hover {
+    color: aqua;
+    cursor: pointer;
+  }
+
+  .footer-media:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
 }

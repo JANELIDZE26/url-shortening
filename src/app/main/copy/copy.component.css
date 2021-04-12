@@ -34,7 +34,41 @@
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
+}
+.before-copy {
+  background-color: hsl(180, 66%, 49%);
+}
+
+.after-copy {
+  background-color: hsl(257, 27%, 26%);
+}
+
+.shorten-button button.before-copy:hover {
+  background-color: hsl(180, 57%, 66%);
 }
 
 
+@media (min-width: 768px) {
+  .copy {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 40rem;
+    overflow: auto;
+  }
+
+  .copy > div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .copy .shortened-link {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border: none;
+  }
+
+
+}

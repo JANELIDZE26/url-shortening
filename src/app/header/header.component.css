@@ -10,6 +10,9 @@
   left: 0;
   background: #fbf8f8;
 }
+.toggle-bars {
+  margin-left: auto;
+}
 
 .toggleButton {
   padding: 0;
@@ -25,7 +28,7 @@
   background-color: grey;
 }
 
-.main-nav {
+.mobile-nav {
   background: hsl(257, 27%, 26%);
   position: absolute;
   bottom: 0;
@@ -33,4 +36,8 @@
   transform: translate(-50%,100%);
   width: 90%;
   border-radius: 10px;
+}
+
+.desktop-nav {
+  width: calc(95% - 121px);
 }

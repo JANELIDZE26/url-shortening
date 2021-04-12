@@ -47,6 +47,11 @@ main > section {
   font-weight: 700;
   width: 70%;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.intro-get-started button:hover {
+  background-color: hsl(180, 57%, 66%);
 }
 
 .link-shorten {
@@ -230,6 +235,7 @@ main .copies {
   width: 50%;
   margin: auto;
   text-align: center;
+  color: hsl(180, 66%, 49%);
 }
 
 .error {
@@ -237,4 +243,92 @@ main .copies {
   width: 50%;
   margin: auto;
   color: red;
+}
+
+@media (min-width: 768px) {
+  main {
+    background: linear-gradient(to bottom, white 25%, hsl(0, 11%, 96%) 25%)
+      center;
+  }
+
+  main .intro {
+    flex-direction: row-reverse;
+    text-align: left;
+    justify-content: space-between;
+    margin-top: 5rem;
+    width: 80%;
+  }
+
+  .intro > div {
+    width: 48%;
+  }
+
+  .intro .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro .intro-get-started {
+    max-width: 23rem;
+  }
+
+  main .link-shorten {
+    min-width: 30rem;
+    max-width: 40rem;
+    margin-top: 8rem;
+  }
+
+  main .copies {
+    overflow: hidden;
+    min-width: 30rem;
+    max-width: 40rem;
+  }
+
+  .get-started .get-started-button {
+    max-width: 20rem;
+  }
+
+  .get-started .get-started-button button:hover {
+    background-color: hsl(180, 57%, 66%);
+  }
+
+  .feature-card-container {
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0;
+  }
+
+  .feature {
+    width: 30%;
+    margin: 0 0 0 2rem;
+    text-align: left;
+  }
+
+  .feature-2 .feature-icon::before,
+  .feature-3 .feature-icon::before {
+    display: none;
+  }
+
+  .feature-2 {
+    transform: translateY(15%);
+  }
+
+  .feature-2::after,
+  .feature-3::after {
+    content: "";
+    background: hsl(180, 66%, 49%);
+    position: absolute;
+    z-index: -2;
+    top: 30%;
+    left: 0;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    width: 0.5rem;
+    height: 5rem;
+  }
+
+  .feature-3 {
+    transform: translateY(30%);
+  }
+
+
 }

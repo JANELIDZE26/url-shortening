@@ -1,0 +1,51 @@
+.desktop-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation ul li {
+  margin-left: 1rem;
+}
+
+.navigation ul li a {
+  color: hsl(257, 7%, 63%);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.login button {
+  outline: none;
+  border: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-button {
+  color: hsl(257, 7%, 63%);
+  background-color: transparent;
+}
+
+.login-button:hover,
+.navigation ul li a:hover {
+  color: hsl(255, 11%, 22%);
+}
+
+.sign-up-button {
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+}
+
+.sign-up-button:hover {
+  background-color: hsl(180, 57%, 66%);
+}

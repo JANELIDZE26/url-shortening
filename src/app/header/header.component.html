@@ -3,10 +3,11 @@
     <div class="logo">
       <img src="./assets/images/logo.svg" alt="logo" />
     </div>
-    <div class="main-nav" [@fadeInOut] *ngIf="showNav">
-      <app-navigation ></app-navigation>
+    <div class="mobile-nav" [@fadeInOut] *ngIf="showNav">
+      <app-mobile-navigation></app-mobile-navigation>
     </div>
-    <div>
+    <app-backdrop (click)="showNav = false" *ngIf="showNav"></app-backdrop>
+    <div class="toggle-bars" *ngIf="currentWidth <= 768; else desktopNavigation">
       <button
         [ngClass]="[
           'hamburger',
@@ -22,5 +23,8 @@
         </span>
       </button>
     </div>
+    <ng-template #desktopNavigation class="">
+      <app-desktop-navigation class="desktop-nav"></app-desktop-navigation>
+    </ng-template>
   </div>
 </header>

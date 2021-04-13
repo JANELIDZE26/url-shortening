@@ -5,10 +5,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { MobileNavigationComponent } from './navigation/mobile-navigation/mobile-navigation.component';
 import { DesktopNavigationComponent } from './navigation/desktop-navigation/desktop-navigation.component';
+import {AppRoutingModule} from '../app-routing.module';
 
 @NgModule({
-  declarations: [HeaderComponent, BackdropComponent, MobileNavigationComponent, DesktopNavigationComponent],
+  declarations: [
+    HeaderComponent,
+    BackdropComponent,
+    MobileNavigationComponent,
+    DesktopNavigationComponent,
+  ],
   exports: [HeaderComponent],
-  imports: [CommonModule, BrowserAnimationsModule],
+  imports: [CommonModule, BrowserAnimationsModule, AppRoutingModule],
 })
 export class HeaderModule {}

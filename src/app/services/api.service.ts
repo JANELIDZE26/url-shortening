@@ -6,6 +6,8 @@ import { map, tap } from 'rxjs/operators';
 export interface Copy {
   full_short_link: string;
   original_link: string;
+  authToken?: string;
+  userId?: string;
 }
 
 @Injectable({
@@ -17,9 +19,12 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getShorten(url): Observable<any> {
-    return this.http.get<{result: Copy}>(`${this.baseUrl}${url}`).pipe(
-      tap((copy) => console.log(copy.result)),
-      map((copy) => copy.result)
+    return this.http.get<{ result: Copy }>(`${this.baseUrl}${url}`).pipe(
+      map((copy: { result: Copy }) => ({
+        full_short_link: copy.result.full_short_link,
+        original_link: copy.result.original_link,
+      })),
+      map((copy) => copy)
     );
   }
 }

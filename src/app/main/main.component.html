@@ -45,9 +45,8 @@
     <app-spinner></app-spinner>
   </div>
   <section class="copies">
-
     <div>
-      <p class="no-copies" *ngIf="showNowLinks">NO LINKS YET!</p>
+      <p class="no-copies" *ngIf="copies.length === 0">NO LINKS YET!</p>
     </div>
     <div *ngIf="showError" class="error">
       <p>INVALID LINK</p>

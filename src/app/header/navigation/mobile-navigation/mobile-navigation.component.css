@@ -53,3 +53,24 @@
   padding: 1rem;
   border-radius: 30px;
 }
+
+.log-out {
+  transition: all 0.3s;
+  border-top: 1px solid grey;
+  text-align: center;
+}
+
+.log-out p {
+  margin: 1rem 0;
+  background: hsl(180, 66%, 49%);
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  padding: .6rem ;
+}
+
+.log-out:hover {
+  color: hsl(255, 11%, 22%);
+  cursor: pointer;
+}

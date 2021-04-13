@@ -48,20 +48,19 @@
   background-color: hsl(180, 57%, 66%);
 }
 
-
 @media (min-width: 768px) {
   .copy {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 40rem;
     overflow: auto;
   }
 
   .copy > div {
     margin: 0;
     padding: 0;
+    width: auto;
   }
 
   .copy .shortened-link {
@@ -69,6 +68,4 @@
     margin-right: 5rem;
     border: none;
   }
-
-
 }

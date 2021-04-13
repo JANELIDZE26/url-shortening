@@ -49,3 +49,13 @@
 .sign-up-button:hover {
   background-color: hsl(180, 57%, 66%);
 }
+
+.log-out {
+  color: hsl(257, 7%, 63%);
+  transition: all .3s;
+}
+
+.log-out:hover {
+  color: hsl(255, 11%, 22%);
+  cursor: pointer;
+}

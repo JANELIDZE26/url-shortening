@@ -6,9 +6,14 @@
       <li><a href="#">Resources</a></li>
     </ul>
   </div>
-  <div class="login">
-    <button class="login-button">Login</button>
-    <button class="sign-up-button">Sign up</button>
+  <div *ngIf="!id; else logOut" class="login">
+    <button (click)="onLogIn()" class="login-button">Login</button>
+    <button (click)="onSignUp()" class="sign-up-button">Sign up</button>
   </div>
-</div>
 
+  <ng-template #logOut>
+    <div (click)="onLogOut()" class="log-out">
+      <p>Log Out</p>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" #signUp="ngForm">
+  <div class="form-inputs">
+    <input
+      [ngClass]="errorMessage ? 'error' : ''"
+      email
+      ngModel
+      name="email"
+      required
+      type="email"
+      placeholder="Email"
+    />
+    <input
+      [ngClass]="errorMessage ? 'error' : ''"
+      ngModel
+      minlength="6"
+      name="password"
+      required
+      type="password"
+      placeholder="password"
+    />
+  </div>
+  <div class="error" *ngIf="errorMessage">
+    <p style="color: red">{{ this.errorMessage }}</p>
+  </div>
+  <div>
+    <button type="submit" [disabled]="!signUp.valid">
+      {{ authMethod === "signUp" ? "Sign Up" : "Sign In" }}
+    </button>
+  </div>
+</form>

@@ -280,7 +280,7 @@ main .copies {
   main .copies {
     overflow: hidden;
     min-width: 30rem;
-    max-width: 40rem;
+    max-width: 60rem;
   }
 
   .get-started .get-started-button {

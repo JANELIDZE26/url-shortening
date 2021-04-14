@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {PreloadAllModules, RouterModule} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { AuthComponent } from './auth/auth.component';
 
@@ -10,18 +10,21 @@ import { AuthComponent } from './auth/auth.component';
         { path: '', component: MainComponent },
         {
           path: 'sign-up',
-          component: AuthComponent,
           data: { authMethod: 'signUp' },
+          loadChildren: () =>
+            import('./auth/auth.module').then((module) => module.AuthModule),
         },
         {
           path: 'login',
-          component: AuthComponent,
           data: { authMethod: 'login' },
+          loadChildren: () =>
+            import('./auth/auth.module').then((module) => module.AuthModule),
         },
         { path: '**', redirectTo: '' },
       ],
       {
         scrollPositionRestoration: 'enabled',
+        preloadingStrategy: PreloadAllModules
       }
     ),
   ],

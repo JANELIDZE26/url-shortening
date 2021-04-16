@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {PreloadAllModules, RouterModule} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { AuthComponent } from './auth/auth.component';
+import {RouterGuard} from './router.guard';
 
 @NgModule({
   imports: [

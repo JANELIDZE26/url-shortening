@@ -32,15 +32,15 @@ export class AuthComponent implements OnInit {
     if (this.signUpForm.invalid) {
       return;
     }
-    let authObject: Observable<ResponseData>;
+    let authObject$: Observable<ResponseData>;
 
     if (this.authMethod === 'signUp') {
-      authObject = this.authService.signup(this.signUpForm.value);
+      authObject$ = this.authService.signup(this.signUpForm.value);
     } else {
-      authObject = this.authService.login(this.signUpForm.value);
+      authObject$ = this.authService.login(this.signUpForm.value);
     }
 
-    authObject.subscribe(
+    authObject$.subscribe(
       (resData) => {
         this.route.navigateByUrl('');
         if (this.authMethod === 'login') {
